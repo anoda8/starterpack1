@@ -2,8 +2,9 @@
     <x-slot name="header">
         <h1 class="mt-4">{{ __('Profil') }}</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">{{ __('Profil') }}</li>
+            <li class="breadcrumb-item active">Dashboard</li>
         </ol>
+
     </x-slot>
 
     <div>

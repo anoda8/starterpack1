@@ -20,5 +20,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('profil');
 
+
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function () {
 });

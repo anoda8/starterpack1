@@ -28,18 +28,31 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        @if (isset($header))
-                            {{ $header }}
-                        @endif
-                        <main>
-                            {{ $slot }}
-                        </main>
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <div class="row">
+                            {{-- <main>
+                                {{ $slot }}
+                            </main> --}}
+                        </div>
                     </div>
                 </main>
-                @livewire('template.footer')
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
-        @stack('modals')
         {{-- <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">

@@ -30,6 +30,7 @@
                     <div class="container-fluid">
                         @if (isset($header))
                             {{ $header }}
+
                         @endif
                         <main>
                             {{ $slot }}

@@ -13,12 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\LoginController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return route('login');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-Route::middleware(['auth:sanctum', 'verified'])->get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('profil');
-
-Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function () {
-});

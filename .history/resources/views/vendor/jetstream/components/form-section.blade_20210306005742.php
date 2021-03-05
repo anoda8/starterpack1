@@ -1,24 +1,13 @@
 @props(['submit'])
 
-<div {{ $attributes->merge(['class' => 'card card-primary mb-5']) }}>
-    <div class="card-header bg-info">
-        <h4 class="card-title">{{ $title }}</h4>
-        <p class="card-text">{{ $description }}</p>
-    </div>
+<div class="card border-primary">
     <div class="card-body">
-        <form wire:submit.prevent="{{ $submit }}">
-            {{ $form }}
-        </form>
+        <h4 class="card-title">Title</h4>
+        <p class="card-text">Text</p>
     </div>
-    @if (isset($actions))
-        <div class="card-footer">
-            {{ $actions }}
-        </div>
-    @endif
-
 </div>
 
-{{-- <div {{ $attributes->merge(['class' => 'md:grid md:grid-cols-3 md:gap-6']) }}>
+<div {{ $attributes->merge(['class' => 'md:grid md:grid-cols-3 md:gap-6']) }}>
     <x-jet-section-title>
         <x-slot name="title">{{ $title }}</x-slot>
         <x-slot name="description">{{ $description }}</x-slot>
@@ -39,4 +28,4 @@
             @endif
         </form>
     </div>
-</div> --}}
+</div>

@@ -28,18 +28,17 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        @if (isset($header))
-                            {{ $header }}
-                        @endif
-                        <main>
-                            {{ $slot }}
-                        </main>
+                        @livewire('template.header')
+                        <div class="row">
+                            {{-- <main>
+                                {{ $slot }}
+                            </main> --}}
+                        </div>
                     </div>
                 </main>
-                @livewire('template.footer')
+
             </div>
         </div>
-        @stack('modals')
         {{-- <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">

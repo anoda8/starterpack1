@@ -20,6 +20,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="sb-nav-fixed">
+        <div>
         @livewire('template.navigation-menu')
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -29,7 +30,12 @@
                 <main>
                     <div class="container-fluid">
                         @if (isset($header))
-                            {{ $header }}
+                            <header>
+                                <h1 class="mt-4">{{ $header }}</h1>
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">{{ $header }}</li>
+                                </ol>
+                            </header>
                         @endif
                         <main>
                             {{ $slot }}
@@ -39,6 +45,7 @@
                 @livewire('template.footer')
             </div>
         </div>
+    </div>
         @stack('modals')
         {{-- <x-jet-banner />
 

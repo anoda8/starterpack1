@@ -29,17 +29,21 @@
                 <main>
                     <div class="container-fluid">
                         @if (isset($header))
-                            {{ $header }}
+                            <h1 class="mt-4">{{ $header }}</h1>
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item active">{{ $header }}</li>
+                            </ol>
                         @endif
-                        <main>
-                            {{ $slot }}
-                        </main>
+                        <div class="row">
+                            {{-- <main>
+                                {{ $slot }}
+                            </main> --}}
+                        </div>
                     </div>
                 </main>
                 @livewire('template.footer')
             </div>
         </div>
-        @stack('modals')
         {{-- <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">

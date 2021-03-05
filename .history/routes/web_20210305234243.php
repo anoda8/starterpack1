@@ -18,7 +18,11 @@ Route::get('/', [App\Http\Controllers\LoginController::class, 'index'])->name('h
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-Route::middleware(['auth:sanctum', 'verified'])->get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('profil');
+Route::middleware(['auth:sanctum', 'verified'])->get(
+    '/profil',
+    App\Http\Livewire\ProfilLive::class
+)->name('profil');
+
 
 Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function () {
 });

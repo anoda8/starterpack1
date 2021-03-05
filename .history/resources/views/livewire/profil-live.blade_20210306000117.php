@@ -1,10 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h1 class="mt-4">{{ __('Profil') }}</h1>
-        <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">{{ __('Profil') }}</li>
-        </ol>
-    </x-slot>
+    {{-- <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Profil') }}
+        </h2>
+    </x-slot> --}}
 
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
