@@ -18,50 +18,11 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        @yield('css')
     </head>
     <body class="sb-nav-fixed">
-        @livewire('template.navigation-menu')
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                @livewire('template.sidebar-menu')
-            </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid">
-                        @if (isset($header))
-                            {{ $header }}
-                        @endif
-                        <main>
-                            {{ $slot }}
-                        </main>
-                    </div>
-                </main>
-                @livewire('template.footer')
-            </div>
-        </div>
-        @stack('modals')
-        {{-- <x-jet-banner />
-
-        <div class="min-h-screen bg-gray-100">
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-
-        @stack('modals') --}}
-
+        {{ $slot }}
         @livewireScripts
-        {{-- <script src="js/scripts.js"></script> --}}
+        @yield('scripts')
     </body>
 </html>
